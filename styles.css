@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+    height: 100vh;
     display: grid;
     grid-template: 1fr 4fr / 1fr 5fr;
 }
@@ -75,14 +76,67 @@ body {
     background-color: var(--second-background-color);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template: 40px 1fr 40px 1fr / 1fr 1fr 1fr;
 
 }
 
+.project-card,
+.announcements-container,
+.trending-container {
+    background-color: var(--background-color);
+}
 
 
+    #prj-title {
+        grid-area: 1/1/span 1/span 2;
+    }
+
+    .projects-container {
+        grid-area: 2/1/span 3/span 2;
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    }
+
+    #ann-title {
+        grid-area: 1/3/2/4;
+    }
+
+    .announcements-container {
+        grid-area:2/3/3/4;
+        display: grid;
+    }
+
+    #trn-title {
+        grid-area: 3/3/4/4;
+    }
+
+    .trending-container {
+        grid-area: 4/3/5/4;        
+        display: grid;
+    }
 
 
+        .trending-card {
+            display: grid;
+            align-items: center;
+            grid-auto-flow: column;
+            justify-content: start;        
+    }
 
+        .trending-text-container {
+        }
+
+        .trending-profile-logo {
+        }
+
+        .trending-username {
+            align-self: flex-end;
+        }
+
+        .trending-project {
+            align-self: flex-start;
+        }
 
 
 
