@@ -17,7 +17,7 @@
 --text-size-links: 20px;
 --text-size-UserSmall: 18px;
 --text-size-greetAndAnnoucementTitles: 14px;
---text-size-buttonsAndProjectTitles: 16px;
+--text-size-buttonsAndProjectTitles: 18px;
 }
 
 * {
@@ -52,8 +52,7 @@ li > a,
     font-size: var(--text-size-UserSmall);
 }
 .greeting,
-.announcement-title,
-.project-description {
+.announcement-title {
     font-size: var(--text-size-greetAndAnnoucementTitles);
 }
 .project-title,
@@ -62,6 +61,37 @@ li > a,
 }
 
 
+.dashboard-title {
+    font-weight: 700;
+}
+
+li > a,
+.header *,
+.project-title,
+.announcement-title {
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.project-description {
+    font-size: 18px;
+}
+
+.announcement-description {
+    font-size: 12px;
+}
+
+.trending-text-container * {
+    font-size: 14px;
+}
+
+.project-title {
+    font-size: 20px;
+}
 
 
 a {
