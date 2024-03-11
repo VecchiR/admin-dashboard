@@ -4,6 +4,7 @@
 --text-dark-color: #0f1a0d;
 --text-mid-color: #636363;
 --text-light-color: #f8fbf7;
+
 --background-color: #f8fbf7;
 --primary-color: #72b162;
 --secondary-color: #9ecfb2;
@@ -270,10 +271,9 @@ body {
 
 
 img {
-    border: 2px solid black;
     border-radius: 100%;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
 }
 
 button {
@@ -284,6 +284,8 @@ button {
 
 
 
-
+.sidebar img {
+    filter: invert(1);
+} 
 
 
