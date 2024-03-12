@@ -18,6 +18,13 @@
 --text-size-UserSmall: 18px;
 --text-size-greetAndAnnoucementTitles: 14px;
 --text-size-buttonsAndProjectTitles: 16px;
+
+/* Shadows by: https://www.joshwcomeau.com/shadow-palette/ */
+--shadow-color: 0deg 0% 68%;
+--shadow-elevation-low:
+  0.8px 1px 1.9px hsl(var(--shadow-color) / 0),
+  1.5px 1.8px 3.5px hsl(var(--shadow-color) / 0.19),
+  2.9px 3.6px 6.9px hsl(var(--shadow-color) / 0.39);
 }
 
 * {
@@ -166,6 +173,10 @@ body {
     display: grid;
     grid-template-rows: 4fr 5fr;
     padding: 20px 40px 15px 30px;
+    box-shadow: var(--shadow-elevation-low);
+    position: relative;
+    z-index: 10;
+
 }
 
     .first-line,
@@ -369,4 +380,10 @@ button {
     border-radius: 100%;
     width: 60px;
     height: 60px;
+}
+
+.announcements-container,
+.trending-container,
+.project-card {
+    box-shadow: var(--shadow-elevation-low);
 }
