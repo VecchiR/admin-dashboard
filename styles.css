@@ -17,7 +17,7 @@
 --text-size-links: 20px;
 --text-size-UserSmall: 18px;
 --text-size-greetAndAnnoucementTitles: 14px;
---text-size-buttonsAndProjectTitles: 18px;
+--text-size-buttonsAndProjectTitles: 16px;
 }
 
 * {
@@ -168,12 +168,26 @@ body {
         align-items: center;
     }
 
+    .first-line {
+        grid-template-columns: 2fr 1fr;
+    }
+
         .search-bar-container {
-            justify-content: start;
+            /* justify-content: start; */
+            grid-template-columns: 50px 1fr;
         }
 
             .search-bar{
                 background-color: var(--second-background-color);
+                border: 0;
+                border-radius: 32px;
+                padding: 6px 12px;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .search-bar:focus-visible {
+                outline: 0;
             }
 
         .profile-container {
@@ -201,9 +215,8 @@ body {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: grid;
-    grid-template: 40px 1fr 60px 1fr / 3fr 3fr 2fr;
+    grid-template: 40px 1fr 60px 1fr / 4fr 4fr minmax(250px, 2fr);
     padding: 25px;
-
 }
 
 .project-card,
@@ -302,14 +315,17 @@ body {
 
 
 img {
-    border-radius: 100%;
-    height: 40px;
-    width: 40px;
+    /* border-radius: 100%; */
+    height: 25px;
+    width: 25px;
 }
 
 button {
     background-color: var(--primary-color);
     color: var(--background-color);
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 32px;
 }
 
 
@@ -319,4 +335,26 @@ button {
     filter: invert(1);
 } 
 
+.dashboard-logo {
+    width: 50px;
+    height: 50px;
+}
 
+.project-buttons,
+.search-icon,
+.notification-icon  {
+    filter: contrast(0.8);
+}
+
+.trending-card img,
+.profile-picture-small {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+}
+
+.profile-picture-big {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
