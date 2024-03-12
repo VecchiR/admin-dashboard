@@ -14,7 +14,7 @@
 
 --text-size-logo: 28px;
 --text-size-UserBig: 24px;
---text-size-links: 20px;
+--text-size-links: 22px;
 --text-size-UserSmall: 18px;
 --text-size-greetAndAnnoucementTitles: 14px;
 --text-size-buttonsAndProjectTitles: 16px;
@@ -134,7 +134,17 @@ body {
         display: grid;
         grid-auto-flow: column;
         align-items: center;
-        justify-content: start;
+        justify-items: center;
+        grid-template-columns: 50px 1fr;
+    }
+
+    ul.links-container {
+        margin-bottom: 70px;
+        margin-top: 50px;
+    }
+
+    .sidebar li {
+        margin-bottom: 25px;
     }
 
     .logo-container {
@@ -143,7 +153,9 @@ body {
 
     li > a,
     .dashboard-title {
-        padding-left: 20px;
+        justify-self: flex-start;
+        align-self: center;
+        padding-left: 10px;
     }
 
 
