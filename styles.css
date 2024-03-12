@@ -7,7 +7,6 @@
 
 --background-color: #f8fbf7;
 --primary-color: #3765a6;
---secondary-color: #9ecfb2;
 --accent-color: #FE8E82;
 --second-background-color: #E2E8F0;
 
@@ -15,9 +14,9 @@
 --text-size-logo: 28px;
 --text-size-UserBig: 24px;
 --text-size-links: 22px;
---text-size-UserSmall: 18px;
---text-size-greetAndAnnoucementTitles: 14px;
---text-size-buttonsAndProjectTitles: 16px;
+--text-size-UserSmall: 20px;
+--text-size-greet: 14px;
+--text-size-ProjectTitles: 16px;
 
 /* Shadows by: https://www.joshwcomeau.com/shadow-palette/ */
 --shadow-color: 0deg 0% 68%;
@@ -58,13 +57,15 @@ li > a,
 .username {
     font-size: var(--text-size-UserSmall);
 }
-.greeting,
-.announcement-title {
-    font-size: var(--text-size-greetAndAnnoucementTitles);
+.greeting {
+    font-size: var(--text-size-greet);
 }
-.project-title,
+.project-title {
+    font-size: var(--text-size-ProjectTitles);
+}
+
 .big-buttons-container > button {
-    font-size: var(--text-size-buttonsAndProjectTitles);
+    font-size: 18px;
 }
 
 
@@ -88,12 +89,14 @@ li > a,
     font-size: 18px;
 }
 
+
 .announcement-description {
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 4px;
 }
 
 .trending-text-container * {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .project-title {
@@ -172,10 +175,11 @@ body {
     grid-row: 1 / 2;
     display: grid;
     grid-template-rows: 4fr 5fr;
-    padding: 20px 40px 15px 30px;
+    padding: 20px 5% 25px 3%;
     box-shadow: var(--shadow-elevation-low);
     position: relative;
     z-index: 10;
+    row-gap: 28px;
 
 }
 
@@ -196,15 +200,14 @@ body {
     }
 
         .search-bar-container {
-            /* justify-content: start; */
-            grid-template-columns: 50px 1fr;
+            grid-template-columns: 40px 1fr;
         }
 
             .search-bar{
                 background-color: var(--second-background-color);
                 border: 0;
                 border-radius: 32px;
-                padding: 6px 12px;
+                padding: 8px 16px;
                 font-size: 16px;
                 font-weight: 400;
             }
@@ -215,19 +218,25 @@ body {
 
         .profile-container {
             justify-content: end;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 32px;
         }
 
         .user-container {
             justify-content: start;
+            gap: 20px;
         }
             
             .user-text-container {
                 grid-template-rows: 1fr 2fr;
                 grid-auto-flow: row;
+                    row-gap: 5px;
             }
 
         .big-buttons-container {
             justify-content: end;
+            gap: 28px;
         }
 
 
@@ -238,8 +247,8 @@ body {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: grid;
-    grid-template: 40px 1fr 60px 1fr / 4fr 4fr minmax(250px, 2fr);
-    padding: 25px;
+    grid-template: 60px 1fr 85px 1fr / 4fr 4fr minmax(250px, 2fr);
+    padding: 25px 2% 25px 25px;
 }
 
 .project-card,
@@ -249,6 +258,10 @@ body {
     border-radius: 8px;
 
 }
+    .section-title {
+        align-self: flex-end;
+        margin-bottom: 18px;
+    }
 
 
     #prj-title {
@@ -261,14 +274,14 @@ body {
         display: grid;
         grid-template: 1fr 1fr 1fr / repeat(auto-fit, minmax(300px, 1fr));
         grid-auto-rows: 1fr;
-        gap: 25px;
+        gap: 30px 25px;
         margin-right: 25px;
 
     }
 
         .project-card {
             display: grid;
-            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-rows: 50px 1fr 50px;
             border-left: 8px solid var(--accent-color);
             padding: 0 20px;
         }
@@ -278,7 +291,15 @@ body {
             }
 
             .project-buttons {
-                place-self: start end ;
+                display: grid;
+                grid-auto-flow: column;
+                place-self: start end;
+                gap: 32px;
+            }
+
+            .project-description {
+                margin-top: 4px;
+                margin-bottom: 6px;
             }
 
 
@@ -291,19 +312,20 @@ body {
         grid-area:2/3/3/4;
         display: grid;
         grid-template-rows: repeat(3, 1fr);
-        /* align-items: center; */
-        padding: 25px;
-        gap: 15px;
+        padding: 15px 35px;
     }
 
         .announcement-card {
-        align-self: center;        
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+        }
 
         .middle-ann {
             border-top: 2px solid var(--second-background-color);
             border-bottom: 2px solid var(--second-background-color);
-            padding: 15px 0;
+            padding: 0;
         }
 
     #trn-title {
@@ -323,7 +345,8 @@ body {
             display: grid;
             align-items: center;
             grid-auto-flow: column;
-            justify-content: start;        
+            justify-content: start;  
+            gap: 16px;      
     }
 
         .trending-username {
@@ -338,15 +361,14 @@ body {
 
 
 img {
-    /* border-radius: 100%; */
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
 }
 
 button {
     background-color: var(--primary-color);
     color: var(--background-color);
-    padding: 12px 18px;
+    padding: 12px 32px;
     border: 0;
     border-radius: 32px;
 }
@@ -369,21 +391,31 @@ button {
     filter: contrast(0.8);
 }
 
+.greeting  {
+    filter: contrast(0.9);
+}
+
 .trending-card img,
 .profile-picture-small {
     border-radius: 100%;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
 }
 
 .profile-picture-big {
     border-radius: 100%;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .announcements-container,
 .trending-container,
 .project-card {
     box-shadow: var(--shadow-elevation-low);
+}
+
+.notification-icon,
+.search-icon {
+    width: 30px;
+    height: 30px;
 }
